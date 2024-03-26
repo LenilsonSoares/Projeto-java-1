@@ -134,6 +134,7 @@ public class Main {
         }
     }
 
+
     public static void potenciacao() {
         Scanner scanner = new Scanner(System.in);
 
