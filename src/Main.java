@@ -26,7 +26,10 @@ public class Main {
             System.out.println("1. Tabuada");
             System.out.println("2. Soma");
             System.out.println("3. Subtração");
-            System.out.println("4. Sair");
+            System.out.println("4. Multiplição");
+            System.out.println("5. Divisão");
+            System.out.println("6. Potenciação");
+            System.out.println("7. Sair");
             opcao = scanner.nextInt();
 
             switch (opcao) {
@@ -40,6 +43,15 @@ public class Main {
                     subtracao();
                     break;
                 case 4:
+                    multiplicacao();
+                    break;
+                case 5:
+                    divisao();
+                    break;
+                case 6:
+                    potenciacao();
+                    break;
+                case 7:
                     System.out.println("Saindo...");
                     break;
                 default:
@@ -74,22 +86,66 @@ public class Main {
         int numero2 = scanner.nextInt();
 
         int resultado = numero1 + numero2;
-        System.out.println("A soma de " + numero1  + " e " + numero2 + " é " + resultado + "." );
+        System.out.println("A soma de " + numero1 + " e " + numero2 + " é " + resultado + ".");
     }
 
     public static void subtracao() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Por favor, digite um número:");
+        System.out.println("Por favor, digite o primeiro número:");
         int numero1 = scanner.nextInt();
 
-        System.out.println("Por favor, digite o segundo número;");
+        System.out.println("Por favor, digite o segundo número:");
         int numero2 = scanner.nextInt();
 
         int resultado = numero1 - numero2;
-        System.out.println("A subtração de " + numero1 + " e " + numero2 + " é " + resultado + ".");
 
+        System.out.println("A subtração de " + numero1 + " e " + numero2 + " é " + resultado + ".");
     }
 
+    public static void multiplicacao() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor, digite o primeiro número:");
+        int numero1 = scanner.nextInt();
+
+        System.out.println("Por favor, digite o segundo número:");
+        int numero2 = scanner.nextInt();
+
+        int resultado = numero1 * numero2;
+
+        System.out.println("A multiplicação de " + numero1 + " e " + numero2 + " é " + resultado + ".");
+    }
+
+    public static void divisao() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor, digite o primeiro número:");
+        int numero1 = scanner.nextInt();
+
+        System.out.println("Por favor, digite o segundo número:");
+        int numero2 = scanner.nextInt();
+
+        if (numero2 == 0) {
+            System.out.println("Não é possível dividir por zero.");
+        } else {
+            double resultado = (double) numero1 / numero2;
+            System.out.println("A divisão de " + numero1 + " por " + numero2 + " é " + resultado + ".");
+        }
+    }
+
+    public static void potenciacao() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor, digite a base:");
+        int base = scanner.nextInt();
+
+        System.out.println("Por favor, digite o expoente:");
+        int expoente = scanner.nextInt();
+
+        double resultado = Math.pow(base, expoente);
+
+        System.out.println("O resultado de " + base + " elevado a " + expoente + " é " + resultado + ".");
+    }
 
 }
