@@ -25,7 +25,8 @@ public class Main {
             System.out.println("\nEscolha uma opção:");
             System.out.println("1. Tabuada");
             System.out.println("2. Soma");
-            System.out.println("3. Sair");
+            System.out.println("3. Subtração");
+            System.out.println("4. Sair");
             opcao = scanner.nextInt();
 
             switch (opcao) {
@@ -36,6 +37,9 @@ public class Main {
                     soma();
                     break;
                 case 3:
+                    subtracao();
+                    break;
+                case 4:
                     System.out.println("Saindo...");
                     break;
                 default:
@@ -72,5 +76,20 @@ public class Main {
         int resultado = numero1 + numero2;
         System.out.println("A soma de " + numero1  + " e " + numero2 + " é " + resultado + "." );
     }
+
+    public static void subtracao() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor, digite um número:");
+        int numero1 = scanner.nextInt();
+
+        System.out.println("Por favor, digite o segundo número;");
+        int numero2 = scanner.nextInt();
+
+        int resultado = numero1 - numero2;
+        System.out.println("A subtração de " + numero1 + " e " + numero2 + " é " + resultado + ".");
+
+    }
+
 
 }
